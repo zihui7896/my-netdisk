@@ -30,13 +30,6 @@
 新建数据库 netdisk
 
 ```mysql
+
 ```
-
-
-
-### Git commit 
-
-生成验证码
-
-![](./images/20230627160952.png)
 

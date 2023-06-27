@@ -49,6 +49,7 @@ public class StringTools {
     }
 
     public static final String getRandomString(Integer count) {
+
         return RandomStringUtils.random(count, true, true);
     }
 
