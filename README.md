@@ -18,8 +18,6 @@
 ####  前端技术栈
 
 1. Vue
-2. ElementUI
-3. Bootstrap
 
 ### 项目功能
 
