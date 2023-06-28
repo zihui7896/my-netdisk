@@ -2,14 +2,18 @@ package com.netdisk.service.impl;
 
 
 import com.netdisk.config.AppConfig;
+import com.netdisk.entity.constants.Constants;
 import com.netdisk.entity.dto.SysSettingsDto;
 import com.netdisk.entity.po.EmailCode;
 import com.netdisk.entity.po.UserInfo;
 import com.netdisk.entity.query.EmailCodeQuery;
 import com.netdisk.entity.query.UserInfoQuery;
+import com.netdisk.exception.BusinessException;
 import com.netdisk.mappers.EmailCodeMapper;
 import com.netdisk.mappers.UserInfoMapper;
 import com.netdisk.service.EmailCodeService;
+import com.netdisk.utils.RedisComponent;
+import com.netdisk.utils.StringTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -40,7 +44,40 @@ public class EmailCodeServiceImpl implements EmailCodeService {
 
     @Resource
     private AppConfig appConfig;
+    @Resource
+    private RedisComponent redisComponent;
 
+
+    /**
+     * 真正发送邮件验证码
+     * @param toEmail 发送到德邮箱
+     * @param code 需要发送的验证码
+     */
+    private void sendEmailCode(String toEmail, String code) {
+        try {
+            MimeMessage message = javaMailSender.createMimeMessage();
+
+            MimeMessageHelper helper = new MimeMessageHelper(message, true);
+            //邮件发件人
+            helper.setFrom(appConfig.getSendUserName());
+            //邮件收件人 1或多个
+            helper.setTo(toEmail);
+
+            SysSettingsDto sysSettingsDto = redisComponent.getSysSettingsDto();
+
+            //邮件主题
+            helper.setSubject(sysSettingsDto.getRegisterEmailTitle());
+            //邮件内容
+            helper.setText(String.format(sysSettingsDto.getRegisterEmailContent(), code));
+            //邮件发送时间
+            helper.setSentDate(new Date());
+            //发送
+            javaMailSender.send(message);
+        } catch (Exception e) {
+            logger.error("邮件发送失败", e);
+            throw new BusinessException("邮件发送失败");
+        }
+    }
 
     /**
      * 发送邮箱验证码的前置和后置工作
@@ -75,7 +112,20 @@ public class EmailCodeServiceImpl implements EmailCodeService {
         emailCodeMapper.insert(emailCode);
     }
 
+    @Override
+    public void checkCode(String email, String code) {
+        EmailCode emailCode = emailCodeMapper.selectByEmailAndCode(email, code);
+        // 如果没查到数据
+        if (emailCode == null) {
+            throw new BusinessException("邮箱验证码不正确");
+        }
+        // 如果已经失效或超时
+        if (emailCode.getStatus() == 1 || System.currentTimeMillis() - emailCode.getCreateTime()
+                .getTime() > Constants.LENGTH_15 * 1000 * 60) {
+            throw new BusinessException("邮箱验证已失效");
+        }
 
+        emailCodeMapper.disableEmailCode(email);
     }
 
 }

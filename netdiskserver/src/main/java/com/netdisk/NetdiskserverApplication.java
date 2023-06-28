@@ -7,16 +7,17 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableAsync
-@SpringBootApplication(scanBasePackages = {"com.netdisk"})
-@MapperScan(basePackages = "com.netdisk.mappers")
-@EnableTransactionManagement
-@EnableScheduling
-public class NetdiskserverApplication {
+
+
+@SpringBootApplication
+@EnableTransactionManagement // 事务
+@EnableScheduling // 定时任务
+@EnableAsync // 异步调用
+@MapperScan("com.netdisk.mappers")
+public class NetdiskServerApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(NetdiskserverApplication.class, args);
+		SpringApplication.run(NetdiskServerApplication.class, args);
 	}
 
 }

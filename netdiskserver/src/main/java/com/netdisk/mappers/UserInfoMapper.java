@@ -1,6 +1,5 @@
 package com.netdisk.mappers;
 
-import com.netdisk.entity.po.UserInfo;
 import org.apache.ibatis.annotations.Param;
 
 /**

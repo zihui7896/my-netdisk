@@ -7,6 +7,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.io.Serializable;
 import java.util.Date;
 
+
+/**
+ * 用户信息
+ */
 @Data
 public class UserInfo implements Serializable {
 
@@ -35,6 +39,7 @@ public class UserInfo implements Serializable {
      * qq 头像
      */
     private String qqAvatar;
+
 
     /**
      * 密码

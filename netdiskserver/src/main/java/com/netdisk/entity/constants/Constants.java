@@ -14,7 +14,7 @@ public class Constants {
     public static final Integer LENGTH_5 = 5;
 
     // redis中邮箱消息的键
-    public static final String REDIS_KEY_SYS_SETTING = "easypan:syssetting";
+    public static final String REDIS_KEY_SYS_SETTING = "netdisk:syssetting";
 
     // 邮箱验证码过期时间
     public static final Integer LENGTH_15 = 15;
@@ -51,12 +51,12 @@ public class Constants {
     public static final Integer REDIS_KEY_EXPIRES_FIVE_MIN = REDIS_KEY_EXPIRES_ONE_MIN * 5;
 
 
-    public static final String REDIS_KEY_DOWNLOAD = "easypan:download:";
+    public static final String REDIS_KEY_DOWNLOAD = "netdisk:download:";
 
 
-    public static final String REDIS_KEY_USER_SPACE_USE = "easypan:user:spaceuse:";
+    public static final String REDIS_KEY_USER_SPACE_USE = "netdisk:user:spaceuse:";
 
-    public static final String REDIS_KEY_USER_FILE_TEMP_SIZE = "easypan:user:file:temp";
+    public static final String REDIS_KEY_USER_FILE_TEMP_SIZE = "netdisk:user:file:temp";
 
     public static final String SESSION_KEY = "session_key";
 

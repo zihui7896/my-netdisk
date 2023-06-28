@@ -6,6 +6,8 @@ import lombok.Data;
 import java.io.Serializable;
 
 
+
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class SysSettingsDto implements Serializable {
