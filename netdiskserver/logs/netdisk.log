@@ -10792,3 +10792,86 @@ Identify and stop the process that's listening on port 7090 or configure this ap
 2023-06-29 19:44:41 [DEBUG][org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor][writeWithMessageConverters][268]-> Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
 2023-06-29 19:44:41 [DEBUG][org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor][traceDebug][108]-> Writing [com.netdisk.entity.vo.ResponseVO@225c14b3]
 2023-06-29 19:44:41 [DEBUG][org.springframework.web.servlet.DispatcherServlet][logResult][1131]-> Completed 200 OK
+2023-06-29 19:47:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 19:47:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31eff60e] was not registered for synchronization because synchronization is not active
+2023-06-29 19:47:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 19:47:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 19:47:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 19:47:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 19:47:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 19:47:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31eff60e]
+2023-06-29 19:50:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 19:50:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bfff730] was not registered for synchronization because synchronization is not active
+2023-06-29 19:50:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 19:50:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 19:50:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 19:50:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 19:50:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 19:50:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bfff730]
+2023-06-29 19:53:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 19:53:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a026fa] was not registered for synchronization because synchronization is not active
+2023-06-29 19:53:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 19:53:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 19:53:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 19:53:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 19:53:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 19:53:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a026fa]
+2023-06-29 19:56:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 19:56:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15664ba2] was not registered for synchronization because synchronization is not active
+2023-06-29 19:56:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 19:56:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 19:56:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 19:56:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 19:56:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 19:56:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15664ba2]
+2023-06-29 19:59:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 19:59:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16b3fdc2] was not registered for synchronization because synchronization is not active
+2023-06-29 19:59:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 19:59:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 19:59:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 19:59:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 19:59:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 19:59:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16b3fdc2]
+2023-06-29 20:02:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 20:02:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a15fcf5] was not registered for synchronization because synchronization is not active
+2023-06-29 20:02:05 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 20:02:05 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a66d4c0] will not be managed by Spring
+2023-06-29 20:02:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 20:02:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 20:02:05 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 20:02:05 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a15fcf5]
+2023-06-29 20:54:36 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2023-06-29 20:54:36 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34fc187a] was not registered for synchronization because synchronization is not active
+2023-06-29 20:54:36 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2023-06-29 20:54:36 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2e94f6ef] will not be managed by Spring
+2023-06-29 20:54:36 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2023-06-29 20:54:36 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2023-06-29 20:54:36 [DEBUG][com.netdisk.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2023-06-29 20:54:36 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34fc187a]
+2023-06-29 20:55:57 [DEBUG][org.springframework.boot.availability.ApplicationAvailabilityBean][onApplicationEvent][77]-> Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-06-29 20:55:57 [DEBUG][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext][doClose][1049]-> Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34bf505a, started on Thu Jun 29 19:41:03 CST 2023
+2023-06-29 20:55:57 [DEBUG][org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver][logKeyFound][115]-> Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2023-06-29 20:55:57 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][stop][365]-> Stopping beans in phase 2147483647
+2023-06-29 20:55:57 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][lambda$doStop$3][238]-> Bean 'webServerGracefulShutdown' completed its stop procedure
+2023-06-29 20:55:57 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][stop][365]-> Stopping beans in phase 2147483646
+2023-06-29 20:55:57 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][lambda$doStop$3][238]-> Bean 'webServerStartStop' completed its stop procedure
+2023-06-29 20:55:57 [DEBUG][org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler][shutdown][218]-> Shutting down ExecutorService 'taskScheduler'
+2023-06-29 20:55:57 [DEBUG][org.springframework.data.redis.listener.RedisMessageListenerContainer][stop][242]-> Stopped RedisMessageListenerContainer
+2023-06-29 20:55:57 [DEBUG][org.springframework.jmx.export.annotation.AnnotationMBeanExporter][destroy][452]-> Unregistering JMX-exposed beans on shutdown
+2023-06-29 20:55:57 [DEBUG][org.springframework.jmx.export.annotation.AnnotationMBeanExporter][unregisterBeans][186]-> Unregistering JMX-exposed beans
+2023-06-29 20:55:57 [DEBUG][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor][shutdown][218]-> Shutting down ExecutorService 'applicationTaskExecutor'
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.RedisChannelHandler][closeAsync][141]-> closeAsync()
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.DefaultEndpoint][closeAsync][590]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.AbstractRedisClient][shutdownAsync][539]-> Initiate shutdown (100, 100, MILLISECONDS)
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelInactive][344]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive()
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.DefaultEndpoint][lambda$notifyChannelInactive$3][504]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelInactive][368]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive() done
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.ConnectionWatchdog][channelInactive][196]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.ConnectionWatchdog][channelInactive][207]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelUnregistered][227]-> [channel=0xcca23922, /127.0.0.1:49743 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelUnregistered()
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.resource.DefaultEventLoopGroupProvider][doRelease][281]-> Release executor io.netty.channel.nio.NioEventLoopGroup@7802fcd6
+2023-06-29 20:55:57 [DEBUG][io.netty.buffer.PoolThreadCache][free][224]-> Freed 8 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.resource.DefaultClientResources][shutdown][710]-> Initiate shutdown (0, 2, SECONDS)
+2023-06-29 20:55:57 [DEBUG][io.lettuce.core.resource.DefaultEventLoopGroupProvider][shutdown][317]-> Initiate shutdown (0, 2, SECONDS)
+2023-06-29 20:55:57 [INFO][com.alibaba.druid.pool.DruidDataSource][close][2138]-> {dataSource-1} closing ...
+2023-06-29 20:55:57 [INFO][com.alibaba.druid.pool.DruidDataSource][close][2211]-> {dataSource-1} closed

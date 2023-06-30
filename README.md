@@ -27,6 +27,10 @@
 
 ![](./images/20230628211004.png)
 
+[百度 (快速体验文件上传)](http://fex.baidu.com/webuploader/getting-started.html) 
+
+Github: [https://github.com/fex-team/webuploader](https://github.com/fex-team/webuploader)
+
 文件分享
 
 ![](./images/20230628210057.png)
