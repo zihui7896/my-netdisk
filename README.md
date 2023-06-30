@@ -63,6 +63,12 @@ Github: [https://github.com/fex-team/webuploader](https://github.com/fex-team/we
 
 ![](./images/20230629194445.png)
 
+登录注册
+
+![](./images/20230630144842.png)
+
+![](./images/20230630144854.png)
+
 ### sql 文件
 
 新建数据库 netdisk
