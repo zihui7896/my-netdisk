@@ -45,6 +45,9 @@
               <el-dropdown-item @click="updatePassword" class="message-item">
                 修改密码
               </el-dropdown-item>
+              <el-dropdown-item @click="" class="message-item">
+                我的信息
+              </el-dropdown-item>
               <el-dropdown-item @click="logout" class="message-item">
                 退出
               </el-dropdown-item>
@@ -235,6 +238,20 @@ const menus = [
       },
     ],
   },
+    // {
+  //   path: "/recycle",
+  //   icon: "del",
+  //   name: "资源互助",
+  //   menuCode: "recycle",
+  //   tips: "回收站为你保存10天内删除的文件",
+  //   allShow: true,
+  //   children: [
+  //     {
+  //       name: "删除的文件",
+  //       path: "/recycle",
+  //     },
+  //   ],
+  // },
   {
     path: "/recycle",
     icon: "del",
