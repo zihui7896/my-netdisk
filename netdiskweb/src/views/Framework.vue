@@ -46,7 +46,7 @@
                 修改密码
               </el-dropdown-item>
               <el-dropdown-item @click="" class="message-item">
-                我的信息
+                我的发帖
               </el-dropdown-item>
               <el-dropdown-item @click="logout" class="message-item">
                 退出
@@ -238,20 +238,20 @@ const menus = [
       },
     ],
   },
-    // {
-  //   path: "/recycle",
-  //   icon: "del",
-  //   name: "资源互助",
-  //   menuCode: "recycle",
-  //   tips: "回收站为你保存10天内删除的文件",
-  //   allShow: true,
-  //   children: [
-  //     {
-  //       name: "删除的文件",
-  //       path: "/recycle",
-  //     },
-  //   ],
-  // },
+    {
+    path: "/#",
+    icon: "huzhu",
+    name: "资源互助",
+    menuCode: "#",
+    tips: "互助评论共享",
+    allShow: true,
+    children: [
+      {
+        name: "",
+        path: "/#",
+      },
+    ],
+  },
   {
     path: "/recycle",
     icon: "del",

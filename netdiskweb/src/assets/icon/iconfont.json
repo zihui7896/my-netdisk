@@ -20,6 +20,13 @@
       "unicode_decimal": 58934
     },
     {
+      "icon_id": "28146291",
+      "name": "互助",
+      "font_class": "huzhu",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
       "icon_id": "553324",
       "name": "验证 验证码",
       "font_class": "checkcode",

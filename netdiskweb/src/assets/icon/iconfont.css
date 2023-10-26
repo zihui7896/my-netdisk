@@ -4,7 +4,12 @@
        url('iconfont.woff?t=1680443314592') format('woff'),
        url('iconfont.ttf?t=1680443314592') format('truetype');
 }
-
+@font-face {
+  font-family: "iconfont"; /* Project id 4303827 */
+  src: url('my/iconfont.woff2?t=1698320878637') format('woff2'),
+       url('my/iconfont.woff?t=1698320878637') format('woff'),
+       url('my/iconfont.ttf?t=1698320878637') format('truetype');
+}
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -19,6 +24,9 @@
 
 .icon-del:before {
   content: "\e636";
+}
+.icon-huzhu:before {
+  content: "\e891";
 }
 
 .icon-checkcode:before {
