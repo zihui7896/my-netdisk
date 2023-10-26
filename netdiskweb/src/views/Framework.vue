@@ -45,9 +45,7 @@
               <el-dropdown-item @click="updatePassword" class="message-item">
                 修改密码
               </el-dropdown-item>
-              <el-dropdown-item @click="" class="message-item">
-                我的发帖
-              </el-dropdown-item>
+              
               <el-dropdown-item @click="logout" class="message-item">
                 退出
               </el-dropdown-item>
@@ -239,16 +237,23 @@ const menus = [
     ],
   },
     {
-    path: "/#",
+    path: "/help/communal",
     icon: "huzhu",
     name: "资源互助",
-    menuCode: "#",
-    tips: "互助评论共享",
+    menuCode: "help",
     allShow: true,
     children: [
       {
-        name: "",
-        path: "/#",
+        name: "资源互助",
+        path: "/help/communal",
+      },
+      {
+        name: "我的求助",
+        path: "/help/myselfseek",
+      },
+      {
+        name: "我的回复",
+        path: "/help/comments",
       },
     ],
   },

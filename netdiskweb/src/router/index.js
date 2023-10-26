@@ -45,6 +45,33 @@ const router = createRouter({
           component: () => import("@/views/recycle/Recycle.vue")
         },
         {
+          path: '/help/communal',
+          name: '资源互助',
+          meta: {
+            needLogin: true,
+            menuCode: "help"
+          },
+          component: () => import("@/views/help/Commual.vue")
+        },
+        {
+          path: '/help/myselfseek',
+          name: '我的求助',
+          meta: {
+            needLogin: true,
+            menuCode: "help"
+          },
+          component: () => import("@/views/help/MyselfSeek.vue")
+        },
+        {
+          path: '/help/comments',
+          name: '我的回复',
+          meta: {
+            needLogin: true,
+            menuCode: "help"
+          },
+          component: () => import("@/views/help/MyComments.vue")
+        },
+        {
           path: '/settings/sysSetting',
           name: '系统设置',
           meta: {
