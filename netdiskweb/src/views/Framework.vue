@@ -251,10 +251,10 @@ const menus = [
         name: "我的求助",
         path: "/help/myselfseek",
       },
-      {
-        name: "我的回复",
-        path: "/help/comments",
-      },
+      // {
+      //   name: "我的回复",
+      //   path: "/help/comments",
+      // },
     ],
   },
   {

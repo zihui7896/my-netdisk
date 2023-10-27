@@ -1,9 +1,9 @@
-<template>
-  <h1>我的求助</h1>
-  <el-card class="box-card">
+<!-- <template>
+    <h2>我的回复</h2>
+    <el-card class="box-card">
     </el-card>
 </template>
-
+  
 <script setup>
 </script>
 
@@ -12,4 +12,4 @@
 .box-card {
     width: 1000px;
 }
-</style>
+</style> -->
