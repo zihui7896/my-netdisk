@@ -17,11 +17,11 @@
       </div>
 
       <!--导航-->
-      <Navigation ref="navigationRef" @navChange="navChange" :adminShow="true"></Navigation>
+      
     </div>
 
   </div>
-  <el-tabs type="border-card" class="box-card">
+  <el-tabs type="border-card" class="box-card" style="margin-top: 10px;">
     <el-tab-pane label="最新">最新</el-tab-pane>
     <el-tab-pane label="已解决">已解决</el-tab-pane>
     <el-tab-pane label="未解决">未解决</el-tab-pane>
