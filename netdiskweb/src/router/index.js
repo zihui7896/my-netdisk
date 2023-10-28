@@ -89,6 +89,7 @@ const router = createRouter({
           },
           component: () => import("@/views/admin/UserList.vue")
         },
+
         {
           path: '/settings/fileList',
           name: '用户文件',
@@ -97,6 +98,15 @@ const router = createRouter({
             menuCode: "settings"
           },
           component: () => import("@/views/admin/FileList.vue")
+        },
+        {
+          path: '/settings/huzhuList',
+          name: '互助管理',
+          meta: {
+            needLogin: true,
+            menuCode: "settings"
+          },
+          component: () => import("@/views/admin/HuzhuList.vue")
         },
       ]
     },

@@ -290,6 +290,10 @@ const menus = [
         path: "/settings/sysSetting",
         name: "系统设置",
       },
+      {
+        path: "/settings/huzhuList",
+        name: "互助设置",
+      },
     ],
   },
 ];

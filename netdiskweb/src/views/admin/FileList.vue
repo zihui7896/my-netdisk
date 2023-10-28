@@ -3,54 +3,28 @@
     <div class="top">
       <div class="top-op">
         <div class="search-panel">
-          <el-input
-            clearable
-            placeholder="输入文件名搜索"
-            v-model="fileNameFuzzy"
-            @keyup.enter="search"
-          >
+          <el-input clearable placeholder="输入文件名搜索" v-model="fileNameFuzzy" @keyup.enter="search">
             <template #suffix>
               <i class="iconfont icon-search" @click="search"></i>
             </template>
           </el-input>
         </div>
         <div class="iconfont icon-refresh" @click="loadDataList"></div>
-        <el-button
-          :style="{ 'margin-left': '10px' }"
-          type="danger"
-          :disabled="selectFileIdList.length == 0"
-          @click="delFileBatch"
-        >
+        <el-button :style="{ 'margin-left': '10px' }" type="danger" :disabled="selectFileIdList.length == 0"
+          @click="delFileBatch">
           <span class="iconfont icon-del"></span>
           批量删除
         </el-button>
       </div>
       <!--导航-->
-      <Navigation
-        ref="navigationRef"
-        @navChange="navChange"
-        :adminShow="true"
-      ></Navigation>
+      <Navigation ref="navigationRef" @navChange="navChange" :adminShow="true"></Navigation>
     </div>
     <div class="file-list">
-      <Table
-        :columns="columns"
-        :showPagination="true"
-        :dataSource="tableData"
-        :fetch="loadDataList"
-        :initFetch="false"
-        :options="tableOptions"
-        @rowSelected="rowSelected"
-      >
+      <Table :columns="columns" :showPagination="true" :dataSource="tableData" :fetch="loadDataList" :initFetch="false"
+        :options="tableOptions" @rowSelected="rowSelected">
         <template #fileName="{ index, row }">
-          <div
-            class="file-item"
-            @mouseenter="showOp(row)"
-            @mouseleave="cancelShowOp(row)"
-          >
-            <template
-              v-if="(row.fileType == 3 || row.fileType == 1) && row.status == 2"
-            >
+          <div class="file-item" @mouseenter="showOp(row)" @mouseleave="cancelShowOp(row)">
+            <template v-if="(row.fileType == 3 || row.fileType == 1) && row.status == 2">
               <icon :cover="row.fileCover" :width="32"></icon>
             </template>
             <template v-else>
@@ -60,49 +34,29 @@
             <span class="file-name" v-if="!row.showEdit" :title="row.fileName">
               <span @click="preview(row)">{{ row.fileName }}</span>
               <span v-if="row.status == 0" class="transfer-status">转码中</span>
-              <span v-if="row.status == 1" class="transfer-status transfer-fail"
-                >转码失败</span
-              >
+              <span v-if="row.status == 1" class="transfer-status transfer-fail">转码失败</span>
             </span>
             <div class="edit-panel" v-if="row.showEdit">
-              <el-input
-                v-model.trim="row.fileNameReal"
-                :maxLength="190"
-                @keyup.enter="saveNameEdit(index)"
-              >
+              <el-input v-model.trim="row.fileNameReal" :maxLength="190" @keyup.enter="saveNameEdit(index)">
                 <template #suffix>{{ row.fileSuffix }}</template>
               </el-input>
-              <span
-                :class="[
-                  'iconfont icon-right1',
-                  row.fileNameReal ? '' : 'not-allow',
-                ]"
-                @click="saveNameEdit(index)"
-              ></span>
-              <span
-                class="iconfont icon-error"
-                @click="cancelNameEdit(index)"
-              ></span>
+              <span :class="[
+                'iconfont icon-right1',
+                row.fileNameReal ? '' : 'not-allow',
+              ]" @click="saveNameEdit(index)"></span>
+              <span class="iconfont icon-error" @click="cancelNameEdit(index)"></span>
             </div>
             <span class="op">
               <template v-if="row.showOp && row.fileId">
-                <span
-                  class="iconfont icon-download"
-                  @click="download(row)"
-                  v-if="row.folderType == 0"
-                  >下载</span
-                >
-                <span class="iconfont icon-del" @click="delFile(row)"
-                  >删除</span
-                >
+                <span class="iconfont icon-download" @click="download(row)" v-if="row.folderType == 0">下载</span>
+                <span class="iconfont icon-del" @click="delFile(row)">删除</span>
               </template>
             </span>
           </div>
         </template>
         <template #fileSize="{ index, row }">
           <span v-if="row.fileSize">
-            {{ proxy.Utils.sizeToStr(row.fileSize) }}</span
-          >
+            {{ proxy.Utils.sizeToStr(row.fileSize) }}</span>
         </template>
       </Table>
     </div>
@@ -299,11 +253,14 @@ const share = (row) => {
 
 <style lang="scss" scoped>
 @import "@/assets/file.list.scss";
+
 .search-panel {
   margin-left: 0px !important;
 }
+
 .file-list {
   margin-top: 10px;
+
   .file-item {
     .op {
       width: 120px;
