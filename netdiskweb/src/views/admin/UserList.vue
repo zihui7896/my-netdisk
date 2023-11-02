@@ -1,27 +1,20 @@
 <template>
   <div>
     <div class="top-panel">
+
       <el-form :model="searchFormData" label-width="80px" @submit.prevent>
         <el-row>
           <el-col :span="4">
             <!--input输入-->
             <el-form-item label="用户昵称">
-              <el-input
-                clearable
-                placeholder="支持模糊搜索"
-                v-model.trim="searchFormData.nickNameFuzzy"
-                @keyup.native="loadDataList"
-              ></el-input>
+              <el-input clearable placeholder="支持模糊搜索" v-model.trim="searchFormData.nickNameFuzzy"
+                @keyup.native="loadDataList"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="4">
             <!-- 下拉框 -->
             <el-form-item label="状态">
-              <el-select
-                clearable
-                placeholder="请选择状态"
-                v-model="searchFormData.status"
-              >
+              <el-select clearable placeholder="请选择状态" v-model="searchFormData.status">
                 <el-option :value="1" label="启用"></el-option>
                 <el-option :value="0" label="禁用"></el-option>
               </el-select>
@@ -34,13 +27,17 @@
       </el-form>
     </div>
     <div class="file-list">
-      <Table
-        :columns="columns"
-        :showPagination="true"
-        :dataSource="tableData"
-        :fetch="loadDataList"
-        :options="tableOptions"
-      >
+      <Table 
+      ref="dataTabeRef" 
+      :columns="columns" 
+      :dataSource="tableData" 
+      :fetch="loadDataList" 
+      :initFetch="true"
+        :options="tableOptions" 
+        @rowSelected="rowSelected"
+        >
+        <!-- <Table :columns="columns" :showPagination="true" :dataSource="tableData" :fetch="loadDataList"
+        :options="tableOptions"> -->
         <template #avatar="{ index, row }">
           <div class="avatar">
             <Avatar :userId="row.userId" :avatar="row.qqAvatar"></Avatar>
@@ -48,9 +45,19 @@
         </template>
 
         <template #space="{ index, row }">
-          {{ proxy.Utils.sizeToStr(row.useSpace) }}/{{
-            proxy.Utils.sizeToStr(row.totalSpace)
+          <span v-if="row.useSpace && row.useSpace.toString().toLowerCase()">
+            {{ proxy.Utils.sizeToStr(row.useSpace) }}/{{
+            proxy.Utils.sizeToStr(row.totalSpace)}}
+          </span>
+           <!-- <span v-else->
+            {{ proxy.Utils.sizeToStr(row.useSpace) }}/{{
+             proxy.Utils.sizeToStr(row.totalSpace)
           }}
+          </span> -->
+          <!-- {{ proxy.Utils.sizeToStr(row.useSpace) }}/{{
+            proxy.Utils.sizeToStr(row.totalSpace)
+          }} -->
+          
         </template>
 
         <template #status="{ index, row }">
@@ -66,31 +73,15 @@
         </template>
       </Table>
     </div>
-    <Dialog
-      :show="dialogConfig.show"
-      :title="dialogConfig.title"
-      :buttons="dialogConfig.buttons"
-      width="400px"
-      :showCancel="false"
-      @close="dialogConfig.show = false"
-    >
-      <el-form
-        :model="formData"
-        :rules="rules"
-        ref="formDataRef"
-        label-width="80px"
-        @submit.prevent
-      >
+    <Dialog :show="dialogConfig.show" :title="dialogConfig.title" :buttons="dialogConfig.buttons" width="400px"
+      :showCancel="false" @close="dialogConfig.show = false">
+      <el-form :model="formData" :rules="rules" ref="formDataRef" label-width="80px" @submit.prevent>
         <!--input输入-->
         <el-form-item label="昵称">
           {{ formData.nickName }}
         </el-form-item>
         <el-form-item label="空间大小" prop="changeSpace">
-          <el-input
-            clearable
-            placeholder="请输入空间大小"
-            v-model="formData.changeSpace"
-          >
+          <el-input clearable placeholder="请输入空间大小" v-model="formData.changeSpace">
             <template #suffix>MB</template>
           </el-input>
         </el-form-item>
@@ -250,11 +241,13 @@ const submitForm = () => {
 .top-panel {
   margin-top: 10px;
 }
+
 .avatar {
   width: 50px;
   height: 50px;
   border-radius: 25px;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100;
