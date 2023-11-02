@@ -45,7 +45,7 @@
         </template>
 
         <template #space="{ index, row }">
-          <span v-if="row.useSpace && row.useSpace.toString().toLowerCase()">
+          <span v-if="row.useSpace && row.useSpace.toString().length">
             {{ proxy.Utils.sizeToStr(row.useSpace) }}/{{
             proxy.Utils.sizeToStr(row.totalSpace)}}
           </span>
